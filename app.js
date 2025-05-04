@@ -24,11 +24,12 @@ app.use("/medicines", medicineRoute);
 app.use("/orders", ordersRoute);
 app.use("/cart", cartRoute);
 // app.use("/doctor-appointment", user);
-// app.use("/doctor-appointment", doctorUser);
-// app.use("/doctor-appointment", medicines);
-// app.use("/doctor-appointment", orders);
+app.use("/doctor-appointment", doctorUser);
+app.use("/doctor-appointment", medicines);
+app.use("/doctor-appointment", orders);
 
-const uri = "mongodb+srv://71762233041:VlbrB2H0l0PU1kJl@hospital.sxxh4.mongodb.net/?retryWrites=true&w=majority&appName=Hospital"
+const uri =
+  "mongodb+srv://71762233041:VlbrB2H0l0PU1kJl@hospital.sxxh4.mongodb.net/?retryWrites=true&w=majority&appName=Hospital";
 
 mongoose
   .connect(uri)
